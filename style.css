@@ -1,0 +1,441 @@
+/* Navigation Bar */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Prompt:wght@300&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url("images/leone-venter-VieM9BdZKFo-unsplash.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #ceccbb;
+    overflow-x: hidden;
+    font-family: "Montserrat", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#navbar {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-family: "Montserrat", sans-serif;
+    height: 60px;
+    background: rgba(177, 140, 140);
+    border-radius: 30px;
+    display: flex;
+
+}
+
+
+
+nav .links {
+    padding: 0;
+    margin: 0;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav .links li {
+    list-style: none;
+}
+
+nav .links a {
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.1rem;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+
+}
+
+#navbar ul>li>a:hover {
+    color: black;
+}
+
+#navbar ul>li>a::before {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0;
+    background-color: rgb(169, 53, 53);
+    transition: all ease-in-out 150ms;
+}
+
+#navbar ul>li>a:hover::before {
+    width: 100%;
+}
+
+/* Intro */
+
+
+
+#home h1 {
+    display: flex;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    font-size: 4rem;
+    padding-left: 10%;
+    color: rgb(114, 112, 112);
+    padding-top: 100px;
+}
+
+h1 span {
+    color: rgb(0, 0, 0);
+}
+
+#home h2 {
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    padding-left: 10%;
+    color: rgb(147, 146, 146);
+    max-width: 460px;
+    top: 300px;
+    white-space: normal;
+}
+
+
+
+/* CARDS */
+h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 3rem;
+    padding-left: 10%;
+    color: rgb(114, 112, 112);
+    padding-top: 100px;
+    display: block;
+}
+
+.card-container {
+    padding-top: 50px;
+    padding-left: 140px;
+    padding-right: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 330px;
+    height: auto;
+    position: relative;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-top: 0;
+    transition: all .25s ease-in;
+    
+}
+
+.card .card-image {
+    height: 200px;
+    width: 310px;
+    background-position: center center;
+    background-size: cover;
+}
+
+.card .card-title {
+    padding: 20px 10px;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+
+.card:hover {
+    background: rgba(177, 140, 140, 1);
+    color: #fff;
+    transform: translateY(-10px) ;
+
+}
+
+.card .cardtext {
+    line-height: 20px;
+    font-size: 400;
+    max-width: 250px;
+    text-align: center;
+}
+
+.card:nth-child(1) .card-image {
+    background-image: url("images/web.jpg");
+}
+
+.card:nth-child(2) .card-image {
+    background-image: url("images/android.jpg");
+}
+
+.card:nth-child(3) .card-image {
+    background-image: url("images/ml.jpg");
+}
+
+.card:nth-child(4) .card-image {
+    background-image: url("images/astro.jpg");
+}
+
+.card:nth-child(5) .card-image {
+    background-image: url("images/block.jpg");
+}
+
+.card:nth-child(6) .card-image {
+    background-image: url("images/arduino.jpg");
+}
+
+.card .btn {
+    margin: 60px;
+    padding: 10px 40px;
+    border-radius: 30px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.card .btn:hover {
+    border: 2px solid rgb(170, 100, 9);
+}
+
+.card .btn:active {
+    border: 2px solid white;
+    background-color: rgba(177, 140, 140);
+}
+
+
+/* 
+grid */
+
+
+
+.grid-container {
+    max-width: 1157px;
+    margin: 50px auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 300px 250px 275px;
+    gap: 40px;
+}
+
+.grid {
+    height: 100%;
+    position: relative;
+    background: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0 5px rgba(177, 140, 140, 0.6);
+    opacity: 0;
+    transition: 0.25s;
+}
+
+.grid-overlay p,.grid-overlay ul {
+
+    margin-top: 20px;
+    padding-bottom: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.grid-overlay--blur {
+    backdrop-filter: blur(10px);
+}
+
+.grid-overlay:hover {
+    opacity: 1;
+}
+
+.grid:nth-of-type(1) {
+    grid-column: 1 / span 3;
+}
+
+.grid:nth-of-type(2) {
+    grid-column: 4 / span 3;
+}
+
+.grid:nth-of-type(3) {
+    grid-column: 1 / span 2;
+}
+
+.grid:nth-of-type(4) {
+    grid-column: 3 / span 2;
+}
+
+.grid:nth-of-type(5) {
+    grid-column: 5 / span 2;
+    grid-row: 2 / span 2;
+}
+
+.grid:nth-of-type(6) {
+    grid-column: 1 / span 4;
+}
+
+.grid>* {
+    padding: 0px;
+}
+
+.grid .grid-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+}
+
+.grid:nth-child(1) .grid-image {
+    background-image: url("images/3124512.jpg");
+}
+
+.grid:nth-child(2) .grid-image {
+    background-image: url("images/algo.png");
+}
+
+.grid:nth-child(3) .grid-image {
+    background-image: url("images/ml.jpg");
+}
+
+.grid:nth-child(4) .grid-image {
+    background-image: url("images/arduino.jpg");
+}
+
+.grid:nth-child(5) .grid-image {
+    background-image: url("images/astro2.jpg");
+}
+
+.grid:nth-child(6) .grid-image {
+    background-image: url("images/block2.jpg");
+}
+
+
+
+
+
+
+/* contact form */
+.contact {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -90px;
+}
+
+.contact .contact-container .box {
+    position: relative;
+    padding: 20px 0px;
+    display: flex;
+}
+
+.contact .contact-container .box .icon {
+    min-width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .contact-container .box .icon:hover img {
+    transition: 0.15s;
+    width: 40px;
+}
+
+.contact .contact-container .box .text {
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+
+}
+
+.contact form {
+    width: 30%;
+    background: rgba(177, 140, 140, 0.4);
+    padding: 50px;
+    border-top: 5px solid rgb(203, 97, 27);
+}
+
+.contact .inputbox {
+    position: relative;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.contact .inputbox input,
+.contact .inputbox textarea {
+
+    outline: none;
+    width: 100%;
+    background: none;
+    padding: 5px 0;
+    margin: 2px 0;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.contact .inputbox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    margin: 2px 0;
+    border: none;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+
+
+.contact .inputbox input:focus~span,
+.contact .inputbox input:valid~span,
+.contact .inputbox textarea:focus~span,
+.contact .inputbox textarea:valid~span {
+    color: black;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+
+.contact .inputbox .date {
+    display: flex;
+    width: 50%;
+}
+
+.contact .inputbox .btn {
+    width: 45%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: rgba(177, 140, 140);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
