@@ -203,6 +203,10 @@ h1 {
     cursor: pointer;
 }
 
+.card .btn::after {
+    content: "->";
+}
+
 .card .btn:hover {
     border: 2px solid rgb(170, 100, 9);
 }
